@@ -1,9 +1,6 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'my_maven'
-    }
     environment {
         GITNAME = 'ks3ppp'            
         GITEMAIL = 'ks3ppp@gmail.com' 
@@ -35,12 +32,6 @@ pipeline {
         }
         
         
-        stage('code build') {
-            steps {
-                sh "mvn clean package"
-                
-            }
-        }
         stage('image build') {
             steps {
                 sh "docker build -t ${DOCKERHUB}:${currentBuild.number} ."

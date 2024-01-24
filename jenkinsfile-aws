@@ -60,7 +60,7 @@ pipeline {
                     sh 'rm -f ~/.dockercfg ~/.docker/config.json || true'
                     
                    
-                    docker.withRegistry("https://${ECR_REGISTRY}", "ecr:${REGION}:${ECR_CREDENTIALS}") {
+                    docker.withRegistry("https://${ECR_REGISTRY}", "${ECR_CREDENTIALS}") {
                       docker.image("${IMAGE_NAME}:${BUILD_NUMBER}").push()
                       docker.image("${IMAGE_NAME}:latest").push()
                     }

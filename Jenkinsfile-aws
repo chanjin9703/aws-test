@@ -8,7 +8,7 @@ pipeline {
     GITSSHADD = 'git@github.com:chanjin9703/aws-test.git'
     GITCREDENTIAL = 'git_cre'
     
-    ECR_REPO_URL = 816040392320.dkr.ecr.us-east-1.amazonaws.com/ecspipe-image
+    ECR_REPO_URL = '816040392320.dkr.ecr.us-east-1.amazonaws.com/ecspipe-image'
     
     ECR_CREDENTIAL = 'ecr_cre'
 }

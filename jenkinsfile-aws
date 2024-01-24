@@ -10,7 +10,7 @@ pipeline {
         
         IMAGE_NAME = 'ecspipe-image'
         ECR_CREDENTIALS = 'ecr_cre' // Jenkins Credential에서 설정한 ECR 액세스 키와 시크릿 키
-        ECR_REGISTRY = '816040392320.dkr.ecr.us-east-1.amazonaws.com'
+        ECR_REGISTRY = '816040392320.dkr.ecr.us-east-1.amazonaws.com/ecspipe-image'
         REGION = 'us-east-1'
     }
 
